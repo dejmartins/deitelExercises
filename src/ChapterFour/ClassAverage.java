@@ -1,7 +1,9 @@
+/*
 package ChapterFour;
 import java.util.Scanner;
 public class ClassAverage {
-    /*public static void main(String[] args){
+    */
+/*public static void main(String[] args){
 
         int total = 0;
         int counter = 1;
@@ -17,7 +19,8 @@ public class ClassAverage {
         int average = total / 10;
         System.out.printf("The total of all grades is %d%n ", total);
         System.out.printf("The average is %d%n ", average);
-    }*/
+    }*//*
+
 
     public static void main(String[] args){
         int total = 0;
@@ -43,7 +46,8 @@ public class ClassAverage {
         }
     }
 
-    /*public static void main(String[] args){
+    */
+/*public static void main(String[] args){
         int passes = 0;
         int failures = 0;
         int counter = 1;
@@ -65,6 +69,8 @@ public class ClassAverage {
 
         if(passes > 8){
             System.out.println("Bonus to instructor!");
-        }*/
+        }*//*
+
     }
 }
+*/

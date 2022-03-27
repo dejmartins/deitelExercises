@@ -1,6 +1,5 @@
-package chapterOne;
+package chapterTwo;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 public class TestttSeperation {
     public static void main(String[] args){

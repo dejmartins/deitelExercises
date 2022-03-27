@@ -3,7 +3,7 @@ package tddClass;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class kataTest {
 
@@ -43,4 +43,38 @@ public class kataTest {
             System.out.print(number + " ");
         }
     }
+
+    @Test
+    public void evenOddCheckTest(){
+        Kata number = new Kata();
+        boolean result = number.isEven(1006756772);
+        assertTrue(result);
+    }
+
+    @Test
+    public void highestNumber(){
+        Kata digit = new Kata();
+        int result = digit.highest(23, 1000, 88, 4, 9);
+        assertEquals(1000, result);
+    }
+
+    @Test
+    public void factorsOfANumberTest(){
+        Kata kata = new Kata();
+        int result = kata.factorsOf(49);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void primeNumberTest(){
+        Kata kata = new Kata();
+        boolean result = kata.primeNumberOf(10);
+        assertFalse(result);
+    }
+
+    /*@Test
+    public void sumEvenNumbersTest(){
+        Kata kata = new Kata();
+        int result = kata.sumOfE
+    }*/
 }

@@ -17,7 +17,9 @@ public class Kata {
         int newDigitTwo = digitFour / 1000;
         int newDigitOne = digitFive / 10000;
 
-        if(newDigitFive == newDigitOne && newDigitFour == newDigitTwo) {return true;}
+        if (newDigitFive == newDigitOne && newDigitFour == newDigitTwo) {
+            return true;
+        }
         return false;
         /*int backwards = newDigitOne * 10000 + newDigitTwo * 1000 + newDigitThree * 100 + newDigitFour * 10 + newDigitFive * 1;
 
@@ -41,9 +43,80 @@ public class Kata {
 
     public int quotient(int firstNumber, int secondNumber) {
         int result = 0;
-        if(firstNumber > secondNumber) result = firstNumber / secondNumber;
-        if(secondNumber > firstNumber) result = secondNumber / firstNumber;
-        if(firstNumber == secondNumber) result = firstNumber / secondNumber;
+        if (firstNumber > secondNumber) result = firstNumber / secondNumber;
+        if (secondNumber > firstNumber) result = secondNumber / firstNumber;
+        if (firstNumber == secondNumber) result = firstNumber / secondNumber;
         return result;
     }
+
+    public boolean isEven(int number) {
+        boolean result = false;
+        if (number % 2 == 0) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+    }
+
+    public int highest(int firstNumber, int secondNumber, int thirdNumber, int fourthNumber, int fifthNumber) {
+        int result = 0;
+        int highestNumber = firstNumber;
+
+        if (secondNumber > highestNumber)
+            highestNumber = secondNumber;
+
+        if (thirdNumber > highestNumber)
+            highestNumber = thirdNumber;
+
+        if (fourthNumber > highestNumber)
+            highestNumber = fourthNumber;
+
+        if (fifthNumber > highestNumber)
+            highestNumber = fifthNumber;
+
+        result = highestNumber;
+        return result;
+    }
+
+    public int factorsOf(int number) {
+        int counter = 0;
+        int factor = 1;
+        int result;
+
+        while(factor <= number){
+            result = number % factor;
+            factor++;
+
+
+            if(result == 0) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    public boolean primeNumberOf(int number) {
+
+            int factor = 1;
+            int result;
+            int counter = 0;
+
+            while(factor <= number){
+                result = number % factor;
+                factor++;
+
+                if(result == 0) {
+                    counter++;
+                }
+            }
+
+            if(counter == 2){
+                return true;
+            }
+            else  return false;
+        }
+
+
 }
+
