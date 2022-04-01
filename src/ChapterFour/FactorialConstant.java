@@ -19,6 +19,7 @@ public class FactorialConstant {
         int numberOfTerms = input.nextInt();
 
         for(int counter = 1; counter <= numberOfTerms; counter++) {
+            
             while (integer <= counter) {
                 factorialValues = integer - count;
 
