@@ -36,4 +36,13 @@ public class ArrayPractice {
         average = total / randomNumbers.length;
         return average;
     }
+
+    public static int getMinimumNumber(int[] randomNumbers) {
+        int minimumNumber = randomNumbers[0];
+        for(int elements : randomNumbers){
+            if(elements < minimumNumber) minimumNumber = elements;
+        }
+        return minimumNumber;
+    }
+
 }

@@ -41,4 +41,11 @@ public class tenElementsArray {
         int result = ArrayPractice.averageOfElements(randomNumbers);
         assertEquals(1, result);
     }
+
+    @Test
+    public void arrayMinimumNumberTest(){
+        int[] randomNumbers = {34, 23, 14, 45, 23};
+        int result = ArrayPractice.getMinimumNumber(randomNumbers);
+        assertEquals(14, result);
+    }
 }

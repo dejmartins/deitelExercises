@@ -14,9 +14,11 @@ public class StudentGrade {
         String name;
         String grade;
 
-        System.out.println("Enter student name and letter grade");
+        System.out.println("Enter student name and letter grade between 'A' and 'D'");
         for(int counter = 1; counter <=5 ; counter++){
+            System.out.print("Enter student's first name: ");
             name = in.nextLine();
+            System.out.print("Enter student's grade: ");
             grade = in.nextLine();
 
             switch (grade){
@@ -33,6 +35,7 @@ public class StudentGrade {
                     dCount++;
             }
         }
+        System.out.println();
         System.out.printf("%d number of students got A%n", aCount);
         System.out.printf("%d number of students got B%n", bCount);
         System.out.printf("%d number of students got C%n", cCount);
