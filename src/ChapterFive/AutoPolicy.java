@@ -1,15 +1,11 @@
 package ChapterFive;
 
+import java.util.Objects;
+
 public class AutoPolicy {
     private int accountNumber;
     private String makeAndModel;
     private String state;
-
-    public AutoPolicy(int accountNumber, String makeAndModel, String state){
-        this.accountNumber = accountNumber;
-        this.makeAndModel = makeAndModel;
-        this.state = state;
-    }
 
     public int getAccountNumber() {
         return accountNumber;
@@ -32,23 +28,19 @@ public class AutoPolicy {
     }
 
     public void setState(String state) {
+        if (Objects.equals(state, "CT") || Objects.equals(state, "MA") || Objects.equals(state, "NJ")
+                || Objects.equals(state, "ME") || Objects.equals(state, "NH") || Objects.equals(state, "NY")
+                || Objects.equals(state, "PA") || Objects.equals(state, "VT"))
         this.state = state;
+        else System.out.println("Error!");
     }
 
     public boolean isNoFaultState(){
-        boolean noFaultState;
+        boolean noFaultState = switch (getState()) {
+            case "MA", "NJ", "NY", "PA" -> true;
+            default -> false;
+        };
 
-        switch(getState()){
-            case "MA":
-            case "NJ":
-            case "NY":
-            case "PA":
-                noFaultState = true;
-                break;
-            default:
-                noFaultState = false;
-                break;
-        }
         return  noFaultState;
     }
 }

@@ -14,12 +14,12 @@ public class crapGame {
         assertNotEquals(0, roll);
     }
 
-    @Test
-    public void randomNumbersWhenDiceRolledTest(){
-        int firstRoll = GameOfChance.rollDice();
-        int secondRoll = GameOfChance.rollDice();
-        assertNotEquals(firstRoll, secondRoll);
-    }
+//    @Test
+//    public void randomNumbersWhenDiceRolledTest(){
+//        int firstRoll = GameOfChance.rollDice();
+//        int secondRoll = GameOfChance.rollDice();
+//        assertNotEquals(firstRoll, secondRoll);
+//    }
 
     @Test
     public void checkForAWinTest(){
