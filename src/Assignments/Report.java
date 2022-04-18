@@ -73,7 +73,6 @@ public class Report {
         }
 
         return Arrays.asList(gradeSum).indexOf(sum) + 1;
-
     }
 
     public int highestScoreInSubject(int subjectIndex) {
@@ -160,7 +159,6 @@ public class Report {
 
         int highestNumber = highestInArray(numberOfFailures);
 
-
         return (subject + 1) + " with " + highestNumber + " failures";
     }
 
@@ -190,7 +188,6 @@ public class Report {
         }
 
         int highestNumber = highestInArray(numberOfPasses);
-
 
         return (subject + 1) + " with " + highestNumber + " passes";
     }
@@ -225,11 +222,10 @@ public class Report {
 
         int lowestScore = lowest[0];
         for (int element : lowest) {
-            if(element != 0) {
+            if (element != 0) {
                 if (element < lowestScore) lowestScore = element;
             }
         }
-
         return getString(student, subject, lowestScore);
     }
 
