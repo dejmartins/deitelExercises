@@ -13,7 +13,7 @@ public class Decryption {
         int secondNumber = (integer % 1000) / 100;
         int thirdNumber = (integer % 100) / 10;
         int fourthNumber = (integer % 10);
-        int nullNumber = 0;
+        int nullNumber;
 
         nullNumber = firstNumber;
         firstNumber = fourthNumber;
@@ -22,6 +22,8 @@ public class Decryption {
         secondNumber = thirdNumber;
         thirdNumber = nullNumber;
 
+        //Add a 10 to avoid getting a negative.
+        //Getting the modulo using a negative will result to zero and one only
         firstNumber += 10 - 7;
         secondNumber += 10 - 7;
         thirdNumber += 10 - 7;
@@ -33,7 +35,7 @@ public class Decryption {
         fourthNumber = fourthNumber % 10;
 
 
-        int result = firstNumber * 1000 + secondNumber * 100 + thirdNumber * 10 + fourthNumber * 1;
+        int result = firstNumber * 1000 + secondNumber * 100 + thirdNumber * 10 + fourthNumber;
 
         System.out.println(result);
 

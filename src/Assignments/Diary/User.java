@@ -4,7 +4,7 @@ public class User {
 
     private String email;
     private String username;
-    private String password;
+    private int password;
 
 
     public String getEmail() {
@@ -23,11 +23,11 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
+    public int getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(int password) {
         this.password = password;
     }
 }

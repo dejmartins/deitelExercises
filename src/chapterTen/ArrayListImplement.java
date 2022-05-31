@@ -3,7 +3,7 @@ package chapterTen;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class ArrayList<S> implements List{
+public class ArrayListImplement<S> implements List{
 
     public int length;
     private int counter;
@@ -59,9 +59,7 @@ public class ArrayList<S> implements List{
     @Override
     public void remove(int index) {
         compressArray();
-        for(int count = index; count < db.length - 1; count++){
-            db[count] = db[count + 1];
-        }
+        if (db.length - 1 - index >= 0) System.arraycopy(db, index + 1, db, index, db.length - 1 - index);
         counter--;
     }
 

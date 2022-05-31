@@ -1,6 +1,6 @@
 package tddClass;
 
-import chapterTen.ArrayList;
+import chapterTen.ArrayListImplement;
 import chapterTen.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ class ListTest {
     List list;
     @BeforeEach
     public void startsWith(){
-        list = new ArrayList<String>();
+        list = new ArrayListImplement<String>();
     }
 
     @Test

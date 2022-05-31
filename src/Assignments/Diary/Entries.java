@@ -1,17 +1,19 @@
 package Assignments.Diary;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Entries {
-    private Date date;
+    private LocalDate date;
+    private String body;
     private String title;
 
-    public Date getDate() {
+
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate() {
+        this.date = LocalDate.now();
     }
 
     public String getTitle() {
@@ -30,5 +32,4 @@ public class Entries {
         this.body = body;
     }
 
-    private String body;
 }

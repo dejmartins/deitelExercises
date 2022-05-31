@@ -1,61 +1,58 @@
 package Assignments.Diary;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
-public class Diary{
+public class Diary {
+    private final ArrayList<Entries> userEntries = new ArrayList<>();
+    public boolean isLock;
+    User user;
 
-    private User user;
-    private Entries entry;
-    private boolean isLock;
-    private final HashSet<User> usersInfo = new HashSet<>();
-    private HashSet<Entries> userEntries = new HashSet<Entries>();
-    private final ArrayList<String> usersEmail = new ArrayList<>();
+    public Diary(User user) {
+        this.user = user;
+    }
 
 
-    public User signup(String email, String username, String password) {
-        if (!checkEmail(email)) {
-
-            user = new User();
-            user.setEmail(email);
-            user.setUsername(username);
-            user.setPassword(password);
-
-            usersInfo.add(user);
+    public void registerEntry(String title, String body) {
+        if (!isLock){
+            Entries entry = new Entries();
+            entry.setTitle(title);
+            entry.setBody(body);
+            entry.setDate();
+            userEntries.add(entry);
         }
-        usersEmail.add(email);
+    }
+
+    public int numberOfEntries() {
+        return userEntries.size();
+    }
+
+    public Entries findEntryBy(String title) {
+        if (!isLock){
+            for (Entries entry : userEntries) {
+                if (title.equals(entry.getTitle())) return entry;
+            }
+        }
+        return null;
+    }
+
+    public void deleteEntry(Entries entry) {
+        userEntries.remove(entry);
+    }
+
+    public User getUser() {
         return user;
-    }
-
-    public boolean userExists(String emailAddress, String username, String password) {
-        for (User user : usersInfo){
-            if (user.getEmail() == emailAddress && user.getUsername() == username && user.getPassword() == password)
-                return true;
-        }
-        return false;
-    }
-
-    private boolean checkEmail(String email) {
-        return usersEmail.contains(email);
     }
 
     public boolean isLocked() {
         return isLock;
     }
 
-    public void logIn(String username, String password) {
-        if (user.getUsername() == username && user.getPassword() == password) isLock = false;
-    }
-
-    public void logOut() {
+    public void lock() {
         isLock = true;
     }
 
-    public void registerEntry(String title, String body) {
-        
+    public void unlock(int password) {
+        if (user.getPassword() == password) isLock = false;
     }
 
-    public int numberOfEntries() {
-        return 1;
-    }
 }
