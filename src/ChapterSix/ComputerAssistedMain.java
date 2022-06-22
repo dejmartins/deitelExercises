@@ -16,11 +16,13 @@ public class ComputerAssistedMain {
         quiz.setAnswer(answer);
 
         while(!quiz.isCorrect()){
+            System.out.println("Incorrect Answer. Try again!\n");
             quiz.continueAsking();
             answer = sc.nextInt();
             quiz.setAnswer(answer);
 
             while ((quiz.isCorrect())){
+                System.out.println("Correct!\n");
                 quiz.generateQuestion();
                 answer = sc.nextInt();
                 quiz.setAnswer(answer);
