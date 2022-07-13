@@ -1,25 +1,32 @@
 package DSA;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 
 public class ArrayIntersection {
     public static void main(String[] args) {
-        int[] nums1 = {1, 2, 3, 4, 5};
-        int[] nums2 = {2, 3, 4, 1, 5};
+        int[] nums1 = {4, 9, 5};
+        int[] nums2 = {9, 4, 9, 8, 4};
 
         System.out.println(Arrays.toString(intersection(nums1, nums2)));
 
     }
 
 
-    public static int[] intersection(int[] arr1, int[] arr2){
-        int[] intersect = new int[arr1.length + arr2.length];
+    public static Object[] intersection(int[] arr1, int[] arr2){
 
-        for (int i = 0; i < intersect.length; i++){
-            if(i < arr1.length) intersect[i] = arr1[i];
-            if(i < arr2.length) intersect[intersect.length - (i + 1)] = arr2[i];
+        List<Integer> intersect = new ArrayList<>();
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j : arr2) {
+                if (arr1[i] == j) {
+                    intersect.add(j);
+                    arr1[i] = 0;
+                }
+            }
         }
 
-        return intersect;
+        return intersect.toArray();
     }
 }
