@@ -1,6 +1,6 @@
 package DSA;
 
-public class QuestionEight {
+public class Addition {
     public static void main(String[] args) {
         System.out.println(sum(1234));
     }

@@ -1,6 +1,6 @@
 package DSA;
 
-public class QuestionFive {
+public class PushZerosToEnd {
     public static void main(String[] args) {
         int[] num = {0, 0, 1, 0, 3, 1, 0, 2};
 

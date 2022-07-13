@@ -1,6 +1,6 @@
 package DSA;
 
-public class QuestionFour {
+public class StockPrices {
     public static void main(String[] args) {
         int[] stockPrices = {7, 6, 4, 3, 1};
 

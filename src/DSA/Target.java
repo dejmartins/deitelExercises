@@ -2,12 +2,12 @@ package DSA;
 
 import java.util.Arrays;
 
-public class QuestionSeven {
+public class Target {
     public static void main(String[] args) {
-        int[] nums = {2, 9, 6,11, 9};
+        int[] nums = {0, 8, 3,11, 9};
 
         System.out.print(Arrays.toString(answer(nums, 9)));
-        ;
+
     }
 
     public static int[] answer(int[] arr, int target){

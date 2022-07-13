@@ -1,6 +1,6 @@
 package DSA;
 
-public class QuestionSix {
+public class HighestNumberIndex {
     public static void main(String[] args) {
         int[] num = {3, 12, 6, 8, 5, 9, 2};
 
