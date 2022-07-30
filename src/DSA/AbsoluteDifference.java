@@ -41,5 +41,4 @@ public class AbsoluteDifference {
         return Math.abs(sumToTheRight - sumToTheLeft);
     }
 
-
 }
