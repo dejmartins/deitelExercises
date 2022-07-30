@@ -2,7 +2,7 @@ package DataStructures;
 
 public class Set{
 
-    ArrayList list = new ArrayList();
+    ArrayList<Integer> list = new ArrayList<Integer>();
     private int counter;
 
 

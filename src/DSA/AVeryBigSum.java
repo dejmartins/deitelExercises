@@ -22,11 +22,8 @@ public class AVeryBigSum {
 
     private static long getSum(List<Long> ar) {
         long sum = 0;
-        for (long a : ar){
-            sum += a;
-        }
-//        sum = ar.stream()
-//                .reduce(0L, Long::sum);
+        sum = ar.stream()
+                .reduce(0L, Long::sum);
         return sum;
     }
 }

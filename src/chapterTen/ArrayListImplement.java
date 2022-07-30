@@ -3,7 +3,7 @@ package chapterTen;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class ArrayListImplement<S> implements List{
+public class ArrayListImplement<S> implements List<Number> {
 
     public int length;
     private int counter;

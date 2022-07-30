@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ListTest {
 
-    List list;
+    List<Number> list;
     @BeforeEach
     public void startsWith(){
         list = new ArrayListImplement<String>();

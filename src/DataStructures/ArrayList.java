@@ -2,7 +2,7 @@ package DataStructures;
 
 import java.util.Arrays;
 
-public class ArrayList {
+public class ArrayList<L> {
     private int[] list = new int[5];
     private int counter;
 

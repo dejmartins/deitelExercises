@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayListTest {
 
-    ArrayList list;
+    ArrayList<L> list;
 
     @BeforeEach
     public void startsWith(){
-        list = new ArrayList();
+        list = new ArrayList<L>();
     }
 
     @Test
