@@ -1,8 +1,8 @@
 package DSA;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class kruskals {
     public static void main(String[] args) {
@@ -49,7 +49,7 @@ public class kruskals {
         gWeight.remove(min);
 
         for (int i = 0; i < gNodes; i++) {
-            min = gWeight.stream().min(Comparator.comparing(Integer::valueOf)).get();
+            min = gWeight.stream().mapToInt(x -> x).min().getAsInt();
             if (container.contains(gFrom.get(gWeight.indexOf(min))) && container.contains(gTo.get(gWeight.indexOf(min)))){
                 container.add(gFrom.get(gWeight.indexOf(min)));
                 container.add(gTo.get(gWeight.indexOf(min)));
@@ -66,7 +66,6 @@ public class kruskals {
                 gWeight.remove(min);
             }
         }
-
         return sum;
     }
 
