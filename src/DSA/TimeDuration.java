@@ -5,7 +5,7 @@ import java.math.RoundingMode;
 
 public class TimeDuration {
     public static void main(String[] args) {
-        System.out.println(solution(7263));
+        System.out.println(solution(32));
     }
 
     public static String solution(int x){
