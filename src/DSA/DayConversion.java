@@ -27,9 +27,9 @@ public class DayConversion {
 
     private void aboveThreeSixty(int numberOfDays){
         year = numberOfDays / 360;
-        if (numberOfDays % 360 > 0 && numberOfDays % 360 < 30) day = numberOfDays % 360;
-        else if (numberOfDays % 360 >= 30) {
-            betweenThirtyAndThreeSixty(numberOfDays);
+        if (numberOfDays % 360 > 0 && numberOfDays % 360 <= 30) day = numberOfDays % 360;
+        else if (numberOfDays % 360 > 30) {
+            betweenThirtyAndThreeSixty(numberOfDays % 360);
         }
     }
 
