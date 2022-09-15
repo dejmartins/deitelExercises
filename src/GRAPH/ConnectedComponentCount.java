@@ -44,6 +44,7 @@ public class ConnectedComponentCount {
     }
 
     private static final List<Integer> visited = new ArrayList<>();
+    private static int largestNode = 0;
 
 
     private static int connectedComponentCount(Map<Integer, List<Integer>> graph) {
@@ -53,6 +54,7 @@ public class ConnectedComponentCount {
                 count++;
             };
         }
+        System.out.println("LargestNode: " + largestNode);
         return count;
     }
 
@@ -60,14 +62,18 @@ public class ConnectedComponentCount {
         List<Integer> stack = new ArrayList<>();
         if(visited.contains(key)) return false;
         stack.add(key);
+        int nodeCount = 0;
 
         while (stack.size() > 0){
             int current = stack.remove(stack.size() - 1);
             if(!visited.contains(current)){
+                nodeCount++;
                 stack.addAll(graph.get(current));
             }
             visited.add(current);
         }
+
+        if(nodeCount > largestNode) largestNode = nodeCount;
 
         return true;
     }
